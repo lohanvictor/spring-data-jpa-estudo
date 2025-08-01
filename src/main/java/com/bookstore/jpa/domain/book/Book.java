@@ -2,6 +2,9 @@ package com.bookstore.jpa.domain.book;
 
 import com.bookstore.jpa.domain.author.Author;
 import com.bookstore.jpa.domain.publisher.Publisher;
+import com.bookstore.jpa.domain.review.Review;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,6 +14,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -51,4 +55,8 @@ public class Book implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "author_id")
     )
     private Set<Author> authors = new HashSet<>();
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
+    private Review review;
 }
