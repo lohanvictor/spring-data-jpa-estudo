@@ -1,10 +1,13 @@
 package com.bookstore.jpa.domain.book;
 
+import com.bookstore.jpa.domain.publisher.Publisher;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,4 +34,8 @@ public class Book implements Serializable {
 
     @Column(nullable = false, unique = true)
     private String title;
+
+    @ManyToOne
+    @JoinColumn(name = "publisher_id")
+    private Publisher publisher;
 }
