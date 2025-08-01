@@ -1,6 +1,15 @@
 # Estudo de Spring Data JPA
 
-Projeto feito para estudo do Spring Data JPA da [vídeo-aula](https://www.youtube.com/watch?v=Ca30sv9EbLo) da Michelli Brito.
+Este projeto tem como objetivo o estudo das relações entre entidades no contexto Spring Data JPA, seguindo o roteiro da [vídeo-aula](https://www.youtube.com/watch?v=Ca30sv9EbLo) da youtuber/desenvolvedora [Michelli Brito](https://www.youtube.com/@MichelliBrito).
+
+
+### Sumário
+
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Variáveis de ambiente](#variáveis-de-ambiente)
+- [Conclusões](#conclusões)
+  - [Criação de tabelas automáticas](#criação-de-tabelas-automáticas)
+  - [Relações entre entidades](#relações-entre-entidades)
 
 ## Tecnologias utilizadas
 
