@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 
 @Service
 public class BookService {
@@ -47,5 +48,10 @@ public class BookService {
 
     public List<Book> findAll() {
         return this.bookRepository.findAll();
+    }
+
+    @Transactional
+    public void delete(UUID id){
+        this.bookRepository.deleteById(id);
     }
 }
