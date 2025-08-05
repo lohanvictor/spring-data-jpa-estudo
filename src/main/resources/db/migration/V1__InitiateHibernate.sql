@@ -1,0 +1,2 @@
+-- Após hibernate iniciar as tabelas
+-- os scripts SQLs irão inserir os dados
