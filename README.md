@@ -1,6 +1,8 @@
 # Estudo de Spring Data JPA
 
-Este projeto tem como objetivo o estudo das relações entre entidades no contexto Spring Data JPA, seguindo o roteiro da [vídeo-aula](https://www.youtube.com/watch?v=Ca30sv9EbLo) da youtuber/desenvolvedora [Michelli Brito](https://www.youtube.com/@MichelliBrito). Foi utilizada a [vídeo-aula](https://www.youtube.com/watch?v=GmbK-O3v3Gg) da youtuber/desenvolvedora [Fernanda Kipper](https://www.youtube.com/@kipperdev) para criação de lançamentos de exceções personalizadas.
+Este projeto tem como objetivo o estudo das relações entre entidades no contexto Spring Data JPA, seguindo o roteiro da [vídeo-aula](https://www.youtube.com/watch?v=Ca30sv9EbLo) da youtuber/desenvolvedora [Michelli Brito](https://www.youtube.com/@MichelliBrito). 
+
+Foi utilizada a [vídeo-aula](https://www.youtube.com/watch?v=GmbK-O3v3Gg) da youtuber/desenvolvedora [Fernanda Kipper](https://www.youtube.com/@kipperdev) para o lançamentos de exceções personalizadas. Da mesma autora, foi utilizada a [vídeo-aula](https://www.youtube.com/watch?v=LX5jaieOIAk) para a criação de _migrations_ para inserção de dados no banco de dados.
 
 
 ### Sumário
@@ -31,13 +33,13 @@ As variáveis de ambiente utilizadas neste projeto:
 
 | Variável          | Tipo   |
 |-------------------|--------|
-| POSTGRES_USER     | string |
-| POSTGRES_PASSWORD | string |
-| POSTGRES_DB       | string |
+| POSTGRES_USER     | String |
+| POSTGRES_PASSWORD | String |
+| POSTGRES_DB       | String |
 
 ## Rotas
 
-Foi utilizado o Flyway para _migrations_ que inserem dados iniciais de autores e editoras nas tabelas.
+Foi utilizado o Flyway para _migrations_ que inserem dados iniciais de autores e editoras no banco de dados.
 
 ### Criação de um livro
 
