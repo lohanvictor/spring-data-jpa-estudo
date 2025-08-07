@@ -5,6 +5,8 @@ import com.bookstore.jpa.domain.book.Book;
 import com.bookstore.jpa.domain.book.BookRequestDTO;
 import com.bookstore.jpa.domain.publisher.Publisher;
 import com.bookstore.jpa.domain.review.Review;
+import com.bookstore.jpa.exceptions.ConflictException;
+import com.bookstore.jpa.exceptions.NotFoundException;
 import com.bookstore.jpa.repositories.AuthorRepository;
 import com.bookstore.jpa.repositories.BookRepository;
 import com.bookstore.jpa.repositories.PublisherRepository;
@@ -31,6 +33,11 @@ public class BookService {
 
     @Transactional
     public Book save(BookRequestDTO bookRequestDTO) {
+        String title = bookRequestDTO.title();
+        if (this.bookRepository.existsByTitle(title)) {
+            throw new ConflictException(String.format("Book title already exists: %s", title));
+        }
+
         Book book = new Book();
         Publisher publisher = this.publisherRepository.findById(bookRequestDTO.publisherId()).orElseThrow();
         Set<Author> authors = new HashSet<>(this.authorRepository.findAllById(bookRequestDTO.authorsId()));
@@ -51,7 +58,10 @@ public class BookService {
     }
 
     @Transactional
-    public void delete(UUID id){
+    public void delete(UUID id) {
+        if (!this.bookRepository.existsById(id)) {
+            throw new NotFoundException(String.format("Book with id %s not found", id));
+        }
         this.bookRepository.deleteById(id);
     }
 }
