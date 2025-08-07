@@ -55,6 +55,11 @@ O corpo da requisição é a seguinte:
 | reviewComment |      String |
 
 Um exemplo de _body_ para a requisição:
+
+````http request
+POST /bookstore/books
+````
+
 ````json
 {
   "title": "Sherlock Holmes 1",
@@ -76,7 +81,7 @@ A variável na rota é a seguinte:
 |--------------|------------:|
 | id           |        UUID |
 
-Um exemplo de _body_ para a requisição:
+Um exemplo de rota para a requisição:
 ````http request
 DELETE /bookstore/books/c2f8d42b-c0b0-47b4-9883-0297691e8095
 ````
