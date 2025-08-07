@@ -1,6 +1,6 @@
 # Estudo de Spring Data JPA
 
-Este projeto tem como objetivo o estudo das relações entre entidades no contexto Spring Data JPA, seguindo o roteiro da [vídeo-aula](https://www.youtube.com/watch?v=Ca30sv9EbLo) da youtuber/desenvolvedora [Michelli Brito](https://www.youtube.com/@MichelliBrito).
+Este projeto tem como objetivo o estudo das relações entre entidades no contexto Spring Data JPA, seguindo o roteiro da [vídeo-aula](https://www.youtube.com/watch?v=Ca30sv9EbLo) da youtuber/desenvolvedora [Michelli Brito](https://www.youtube.com/@MichelliBrito). Foi utilizada a [vídeo-aula](https://www.youtube.com/watch?v=GmbK-O3v3Gg) da youtuber/desenvolvedora [Fernanda Kipper](https://www.youtube.com/@kipperdev) para criação de lançamentos de exceções personalizadas.
 
 
 ### Sumário
